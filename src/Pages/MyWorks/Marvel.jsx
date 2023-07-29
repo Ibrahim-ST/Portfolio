@@ -27,7 +27,7 @@ const Marvel = () => {
             data-aos="zoom-in-down"
             className="flex justify-center my-2 hover:cursor-pointer"
           >
-            <a onClick={() => window.my_modal_5.showModal()}>
+            <a onClick={() => window.Marvel_production_modal.showModal()}>
               <PrimaryButton btnText={"View gallery"}></PrimaryButton>
             </a>
           </p>
@@ -58,13 +58,13 @@ const Marvel = () => {
       </div>
 
       {/* Marvel production modal */}
-      <dialog id="my_modal_5" className="modal">
+      <dialog id="Marvel_production_modal" className="modal">
         <form
           method="dialog"
           className="modal-box min-h-full w-11/12 sm:max-w-4xl "
         >
           <h3 className="font-bold text-lg text-center mb-2">
-            Ristorante Italiano!
+          Marvel Production!
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             <div>

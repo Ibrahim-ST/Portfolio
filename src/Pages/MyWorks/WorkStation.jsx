@@ -28,7 +28,7 @@ const WorkStation = () => {
             data-aos="zoom-in-down"
             className="flex justify-center my-2 hover:cursor-pointer"
           >
-            <a onClick={() => window.my_modal_4.showModal()}>
+            <a onClick={() => window.workStation_modal.showModal()}>
               <PrimaryButton btnText={"View gallery"}></PrimaryButton>
             </a>
           </p>
@@ -61,13 +61,13 @@ const WorkStation = () => {
       </div>
 
       {/* Work Station modal */}
-      <dialog id="my_modal_4" className="modal">
+      <dialog id="workStation_modal" className="modal">
         <form
           method="dialog"
           className="modal-box min-h-full w-11/12 sm:max-w-4xl "
         >
           <h3 className="font-bold text-lg text-center mb-2">
-            Ristorante Italiano!
+            Work Station!
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             <div>
