@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+li{
+    text-transform: uppercase;
+    font-size: large;
+}
+
+ul li:hover{
+    color: brown;
+}
+
+a:active{
+    color: red;
+}
+p{
+    font-family: monospace;
+    font-size: large;
+}
+
+body{
+    overflow-x: hidden;
+}
