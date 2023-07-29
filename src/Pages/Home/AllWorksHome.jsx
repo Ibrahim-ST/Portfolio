@@ -2,6 +2,7 @@
 import React from "react";
 import bg from "../../assets/bg5.jpg"; 
 import resume from '../../assets/RESUME.pdf'
+import Candidus from "../MyWorks/Candidus";
 import Farmhouse from "../MyWorks/Farmhouse";
 import FourWheelers from "../MyWorks/FourWheelers";
 import LegalSolution from "../MyWorks/LegalSolution";
@@ -53,10 +54,11 @@ const AllWorksHome = () => {
         <Farmhouse />
         <FourWheelers />
         <Ristorante />
+        <WorkStation />
         <LegalSolution />
         <Reveal />
         <Marvel />
-        <WorkStation />
+        <Candidus />
       </div>
     </div>
     </>
