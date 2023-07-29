@@ -6,7 +6,7 @@ import resume from '../../assets/RESUME.pdf'
 
 const About = () => {
   return (
-    <div id="about" className="my-20 overflow-x-hidden">
+    <div id="about" className="my-20 overflow-x-hidden font-poppins">
         <SectionTitle title="About me" sub=" I specialize in building dynamic web applications using the MERN stack. Let's uncover more about my journey and how I can enhance your next project."></SectionTitle>
       <div className="hero max-w-5xl mx-auto bg-[#F7F9FC]">
         

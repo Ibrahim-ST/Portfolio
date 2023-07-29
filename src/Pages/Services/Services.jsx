@@ -6,7 +6,7 @@ import CountUp from 'react-countup';
 
 const Services = () => {
   return (
-    <div id="services" className="overflow-hidden">
+    <div id="services" className="overflow-hidden font-poppins">
       <div className="max-w-5xl mx-auto">
         <SectionTitle title="MY SPECIALIZATIONS" sub={"I offer comprehensive services to create scalable and responsive web apps. From concept and design to implementation and deployment, I provide solutions tailored to your unique needs. "}></SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 my-5 w-3/4 sm:w-full mx-auto">
