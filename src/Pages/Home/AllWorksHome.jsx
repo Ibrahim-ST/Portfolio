@@ -6,6 +6,7 @@ import Farmhouse from "../MyWorks/Farmhouse";
 import FourWheelers from "../MyWorks/FourWheelers";
 import LegalSolution from "../MyWorks/LegalSolution";
 import Marvel from "../MyWorks/Marvel";
+import Reveal from "../MyWorks/reveal";
 import Ristorante from "../MyWorks/Ristorante";
 import WorkStation from "../MyWorks/WorkStation";
 
@@ -53,6 +54,7 @@ const AllWorksHome = () => {
         <FourWheelers />
         <Ristorante />
         <LegalSolution />
+        <Reveal />
         <Marvel />
         <WorkStation />
       </div>
