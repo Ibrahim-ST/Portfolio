@@ -5,6 +5,7 @@ import resume from '../../assets/RESUME.pdf'
 import Candidus from "../MyWorks/Candidus";
 import Farmhouse from "../MyWorks/Farmhouse";
 import FourWheelers from "../MyWorks/FourWheelers";
+import G3Architects from "../MyWorks/G3Architects";
 import LegalSolution from "../MyWorks/LegalSolution";
 import Marvel from "../MyWorks/Marvel";
 import Reveal from "../MyWorks/reveal";
@@ -58,6 +59,7 @@ const AllWorksHome = () => {
         <LegalSolution />
         <Reveal />
         <Marvel />
+        <G3Architects />
         <Candidus />
       </div>
     </div>
