@@ -9,7 +9,7 @@ import Ristorante from "./Ristorante";
 const MyWorks = () => {
   return (
     <div id="works" className="max-w-5xl mx-auto my-14 overflow-hidden">
-      <SectionTitle title="my works" sub={"Featuring Linkcollection of projects developed using the powerful MERN stack. Explore my past works and experience the synergy of cutting-edge technologies in action."}></SectionTitle>
+      <SectionTitle title="my works" sub={"Featuring a link collection of projects developed using the powerful MERN stack. Explore my past works and experience the synergy of cutting-edge technologies in action."}></SectionTitle>
       
       <ViewAll title={"View All Projects"} /> 
       <div>
