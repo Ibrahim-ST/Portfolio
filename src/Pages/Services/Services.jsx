@@ -13,7 +13,7 @@ const Services = () => {
           <div
           data-aos="zoom-out-up"          
           data-aos-duration="500"
-          className="max-w-sm bg-white border border-gray-200 rounded-lg shadow hover:border-[#ff5478] hover:border-2">
+          className="max-w-sm bg-white border border-gray-200 rounded-lg shadow hover:border-[#ff5478] hover:border-2 ">
             <Player
               autoplay
               loop

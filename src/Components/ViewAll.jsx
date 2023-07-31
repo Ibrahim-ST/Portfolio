@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom"; 
 
-const ViewAll = ({ title }) => {
+const ViewAll = ({ title, aosData }) => {
   return (
     <>
       <section>
@@ -11,7 +11,7 @@ const ViewAll = ({ title }) => {
           className="flex justify-center my-2 hover:cursor-pointer"
         >
           <Link to="/allWorks" 
-              data-aos="fade-down"
+              data-aos={aosData}
               data-aos-delay="300"
               data-aos-duration="550"
               className="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md"

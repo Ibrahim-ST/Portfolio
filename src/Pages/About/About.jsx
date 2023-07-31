@@ -6,7 +6,7 @@ import resume from '../../assets/RESUME.pdf'
 
 const About = () => {
   return (
-    <div id="about" className="my-20 overflow-x-hidden font-poppins">
+    <div id="about" className="my-20 overflow-x-hidden font-poppins overflow-y-hidden">
         <SectionTitle title="About me" sub=" I specialize in building dynamic web applications using the MERN stack. Let's uncover more about my journey and how I can enhance your next project."></SectionTitle>
       <div className="hero max-w-5xl mx-auto bg-[#F7F9FC]">
         
@@ -15,7 +15,7 @@ const About = () => {
              data-aos-duration="1000">
           <img
             src={ibrahim}
-            className="sm:max-w-sm rounded-3xl bg-white shadow-2xl p-5 hover:-translate-y-5 hover:grayscale  transition-all "
+            className="sm:max-w-sm rounded-3xl bg-white shadow-2xl p-5 hover:-translate-x-5 hover:grayscale transition-transform duration-300 -rotate-6 "
           />
           </div>
           <div  >

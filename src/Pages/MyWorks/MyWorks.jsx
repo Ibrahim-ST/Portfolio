@@ -11,13 +11,13 @@ const MyWorks = () => {
     <div id="works" className="max-w-5xl mx-auto my-14 overflow-hidden">
       <SectionTitle title="my works" sub={"Featuring a link collection of projects developed using the powerful MERN stack. Explore my past works and experience the synergy of cutting-edge technologies in action."}></SectionTitle>
       
-      <ViewAll title={"View All Projects"} /> 
+      <ViewAll title={"View All Projects"} aosData={"fade-down"}/> 
       <div>
         <Farmhouse />
         <FourWheelers />
         <Ristorante />
       </div>
-      <ViewAll title={"View more"} /> 
+      <ViewAll title={"View more"} aosData={"fade-up"}/> 
 
     </div>
   );

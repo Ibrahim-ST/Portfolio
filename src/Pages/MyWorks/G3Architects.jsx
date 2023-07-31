@@ -38,7 +38,7 @@ const G3Architects = () => {
           G3 Architects
           </h2>
           <p data-aos="zoom-in-left" className="sm:w-2/3">
-          Marvel Production is a captivating movie collection website that houses an extensive library of thrilling and action-packed films from the renowned Marvel Universe.  
+          G3 Architects team goes the extra mile for all our clients. We provide a range of services - from custom software development to dedicated teams since 2020. 
           </p>
           <div data-aos="zoom-in-left" className="flex gap-2 flex-wrap ">
             <a href="https://ibrahim-st.github.io/g3-architects/">
