@@ -155,7 +155,7 @@ const Contact = () => {
 
               <div  data-aos="zoom-out-left" className="text-center">
                 <input
-                  className="btn   bg-slate-100 border-0 border-b-4 border-[#ff5478] mb-4 mt-2 hover:border-4 hover:border-[#ff5478] transition-colors duration-300"
+                  className="btn   bg-slate-100 border-0 border-b-4 border-l-4 border-[#ff5478] mb-4 mt-2 hover:border-4 hover:border-[#ff5478] transform transition-all duration-200"
                   type="submit"
                   value="Send Message"
                 />
