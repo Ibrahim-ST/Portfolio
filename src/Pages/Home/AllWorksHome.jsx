@@ -8,7 +8,7 @@ import FourWheelers from "../MyWorks/FourWheelers";
 import G3Architects from "../MyWorks/G3Architects";
 import LegalSolution from "../MyWorks/LegalSolution";
 import Marvel from "../MyWorks/Marvel";
-import Reveal from "../MyWorks/reveal";
+import Reveal from "../MyWorks/Reveal";
 import Ristorante from "../MyWorks/Ristorante";
 import WorkStation from "../MyWorks/WorkStation";
 
