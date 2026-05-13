@@ -19,7 +19,7 @@ const Farmhouse = () => {
             <img
               src={farmhouse}
               alt="Album"
-              className="rounded py-2 w-64 h-64 object-top hover:object-bottom  duration-1000 transition-all"
+              className="rounded-md py-2 w-64 h-64 object-top hover:object-bottom  duration-1000 transition-all"
             />
           </figure>
           <p

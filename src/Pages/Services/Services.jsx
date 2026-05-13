@@ -1,132 +1,287 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { Player } from "@lottiefiles/react-lottie-player";
-import SectionTitle from "../../Components/SectionTitle";
 import CountUp from "react-countup";
 
-const Services = () => {
-  return (
-    <div id="services" className="overflow-hidden font-poppins">
-      <div className="max-w-5xl mx-auto">
-        <SectionTitle
-          title="MY SPECIALIZATIONS"
-          sub={
-            "I offer comprehensive services to create scalable and responsive web apps. From concept and design to implementation and deployment, I provide solutions tailored to your unique needs. "
-          }
-        ></SectionTitle>
-        <div
-          data-aos="zoom-out-up"
-          data-aos-duration="500"
-          className="grid grid-cols-1 md:grid-cols-3 gap-5 my-5 w-3/4 sm:w-full mx-auto perspective"
-        >
-          <div className="max-w-sm bg-white border border-gray-200 rounded-lg transform duration-300 shadow hover:ring-[#ff5478] hover:ring-2 hover:rotate-scale">
-            <Player
-              autoplay
-              loop
-              src="https://assets10.lottiefiles.com/packages/lf20_jtbfg2nb.json"
-              style={{ height: "200px", width: "200px" }}
-            ></Player>
-            <div className="p-5">
-              <a href="#">
-                <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900  ">
-                  Responsive web development
-                </h5>
-              </a>
-              <p className="mb-3 font-normal text-gray-700  ">
-                Optimized for different screen sizes, providing a consistent and
-                enjoyable experience across desktops, tablets, and smartphones.
-              </p>
-            </div>
-          </div>
-          <div className="max-w-sm bg-white border border-gray-200 rounded-lg transform duration-300 shadow hover:ring-[#ff5478] hover:ring-2 hover:scale-105">
-            <Player
-              autoplay
-              loop
-              src="https://assets10.lottiefiles.com/packages/lf20_uzvwjpkq.json"
-              style={{ height: "200px", width: "200px" }}
-            ></Player>
-            <div className="p-5">
-              <a href="#">
-                <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900  ">
-                  UI Design Integration
-                </h5>
-              </a>
-              <p className="mb-3 font-normal text-gray-700  ">
-                Collaborate with UI/UX designers to bring designs to life,
-                ensuring pixel-perfect implementations and maintaining design
-                consistency.
-              </p>
-            </div>
-          </div>
-          <div className="max-w-sm bg-white border border-gray-200 rounded-lg transform duration-300 shadow hover:ring-[#ff5478] hover:ring-2 hover:rotate-scale-right">
-            <Player
-              autoplay
-              loop
-              src="https://assets2.lottiefiles.com/private_files/lf30_zSGy1w.json"
-              style={{ height: "200px", width: "200px" }}
-            ></Player>
-            <div className="p-5">
-              <a href="#">
-                <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900  ">
-                  Front-End Web Development
-                </h5>
-              </a>
-              <p className="mb-3 font-normal text-gray-700  ">
-                Building and maintaining modern, responsive, and user-friendly
-                web apps using React.js and Tailwind CSS. Focusing on creating
-                seamless UI.
-              </p>
-            </div>
-          </div>
-        </div>
+import {
+  FaCode,
+  FaLaptopCode,
+  FaMobileAlt,
+  FaArrowRight,
+} from "react-icons/fa";
 
-        <div className="mx-4 sm:mx-0 grid grid-cols-1 md:grid-cols-4 bg-white p-6 rounded-3xl justify-items-center">
-          <div
-            data-aos="fade-up-right"
-            data-aos-duration="800"
-            className="m-5 w-44 h-36 p-6 bg-[#FBFBFC]  border-4 border-[#ff5478] rounded-lg shadow hover:bg-gray-100 text-center flex items-center
-          transition ease-in-out    hover:-translate-y-2   duration-300 hover:border-[#ff5478] hover:border-2 uppercase
+const fadeUp = {
+  hidden: {
+    opacity: 0,
+    y: 60,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: [0.25, 0.1, 0.25, 1],
+    },
+  },
+};
+
+const staggerContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.18,
+    },
+  },
+};
+
+const Services = () => {
+  const services = [
+    {
+      title: "Frontend Engineering",
+      description:
+        "Building modern, scalable, and high-performance interfaces using React, Tailwind CSS, and modern frontend technologies.",
+      icon: <FaCode />,
+      animation: "https://assets10.lottiefiles.com/packages/lf20_jtbfg2nb.json",
+    },
+    {
+      title: "UI/UX Implementation",
+      description:
+        "Transforming premium UI/UX concepts into pixel-perfect digital experiences with smooth interactions and responsive layouts.",
+      icon: <FaLaptopCode />,
+      animation: "https://assets10.lottiefiles.com/packages/lf20_uzvwjpkq.json",
+    },
+    {
+      title: "Responsive Web Apps",
+      description:
+        "Developing fully responsive and production-ready applications optimized for desktops, tablets, and mobile devices.",
+      icon: <FaMobileAlt />,
+      animation:
+        "https://assets2.lottiefiles.com/private_files/lf30_zSGy1w.json",
+    },
+  ];
+
+  const stats = [
+    {
+      number: 30,
+      suffix: "+",
+      title: "Projects Completed",
+    },
+    {
+      number: 1,
+      suffix: "+",
+      title: "Years Experience",
+    },
+    {
+      number: 17,
+      suffix: "+",
+      title: "Happy Clients",
+    },
+    {
+      number: 10,
+      suffix: "+",
+      title: "Client Reviews",
+    },
+  ];
+
+  return (
+    <section
+      id="services"
+      className="relative overflow-hidden bg-[#070707] px-6 py-24"
+    >
+      {/* Background Glow */}
+      <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl" />
+
+      <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-purple-500/10 blur-3xl" />
+
+      <div className="relative mx-auto max-w-7xl">
+        {/* Heading */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          className="mx-auto mb-20 max-w-3xl text-center"
+        >
+          <p className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-cyan-400">
+            My Specializations
+          </p>
+
+          <h2 className="text-4xl font-bold leading-tight text-white md:text-6xl">
+            Crafting Modern &
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              {" "}
+              Scalable Solutions
+            </span>
+          </h2>
+
+          <p className="mt-6 text-base leading-8 text-gray-400 md:text-lg">
+            I develop high-performance digital experiences focused on
+            scalability, maintainability, modern UI engineering, and seamless
+            user interactions.
+          </p>
+        </motion.div>
+
+        {/* Services Grid */}
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.15 }}
+          className="grid gap-8 lg:grid-cols-3"
+        >
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              variants={fadeUp}
+              whileHover={{
+                y: -10,
+              }}
+              className="
+                group relative overflow-hidden
+                rounded-3xl border border-white/10
+                bg-white/[0.03]
+                p-8 backdrop-blur-xl
+                transition-all duration-500
+                hover:border-cyan-400/30
+                hover:bg-cyan-400/[0.03]
+              "
+            >
+              {/* Gradient Hover */}
+              <div
+                className="
+                  absolute inset-0 opacity-0
+                  transition-opacity duration-500
+                  group-hover:opacity-100
+                  bg-gradient-to-br
+                  from-cyan-500/[0.06]
+                  via-transparent
+                  to-purple-500/[0.06]
+                "
+              />
+
+              {/* Icon */}
+              <div
+                className="
+                  relative z-10 mb-6
+                  flex h-16 w-16 items-center justify-center
+                  rounded-2xl bg-cyan-400/10
+                  text-2xl text-cyan-400
+                "
+              >
+                {service.icon}
+              </div>
+
+              {/* Lottie */}
+              <div className="relative z-10 mb-6">
+                <Player
+                  autoplay
+                  loop
+                  src={service.animation}
+                  style={{
+                    height: "180px",
+                    width: "180px",
+                  }}
+                />
+              </div>
+
+              {/* Content */}
+              <div className="relative z-10">
+                <h3 className="text-2xl font-semibold text-white">
+                  {service.title}
+                </h3>
+
+                <p className="mt-5 leading-8 text-gray-400">
+                  {service.description}
+                </p>
+              </div>
+
+              {/* Arrow */}
+              <div
+                className="
+                  relative z-10 mt-8
+                  flex items-center gap-2
+                  text-cyan-400
+                "
+              >
+                <span className="text-sm font-medium uppercase tracking-[0.2em]">
+                  Learn More
+                </span>
+
+                <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Stats Section */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          className="
+            mt-20 grid gap-6
+            rounded-[2rem]
+            border border-white/10
+            bg-white/[0.03]
+            p-8 backdrop-blur-xl
+            sm:grid-cols-2
+            lg:grid-cols-4
           "
-          >
-            <p className="font-bold text-lg">
-              <CountUp end={30} duration={15} />+ <br /> Projects completed
-            </p>
-          </div>
-          <div
-            data-aos="fade-down-left"
-            data-aos-duration="800"
-            className="m-5 w-44 h-36 p-6 bg-[#FBFBFC]  border-4 border-[#ff5478] rounded-lg shadow hover:bg-gray-100 text-center flex items-center
-          transition ease-in-out  first-lindeterminate://#region  hover:-translate-y-2   duration-300 hover:border-[#ff5478] hover:border-2 uppercase
-          "
-          >
-            <p className="font-bold text-lg">
-              1+ <br /> YEAR OF EXPERIENCE
-            </p>
-          </div>
-          <div
-            data-aos="zoom-in-right"
-            data-aos-duration="800"
-            className="m-5 w-44 h-36 p-6 bg-[#FBFBFC]  border-4 border-[#ff5478] rounded-lg shadow hover:bg-gray-100 text-center flex items-center
-          transition ease-in-out    hover:-translate-y-2   duration-300 hover:border-[#ff5478] hover:border-2 uppercase
-          "
-          >
-            <p className="font-bold text-lg">
-              17+ <br /> HAPPY CLIENTS
-            </p>
-          </div>
-          <div
-            data-aos="zoom-out-left"
-            data-aos-duration="800"
-            className="m-5 w-44 h-36 p-6 bg-[#FBFBFC]  border-4 border-[#ff5478] rounded-lg shadow hover:bg-gray-100 text-center flex items-center
-          transition ease-in-out    hover:-translate-y-2   duration-300 hover:border-[#ff5478] hover:border-2 uppercase
-          "
-          >
-            <p className="font-bold text-lg">
-              10+ <br /> CUSTOMER REVIEWS
-            </p>
-          </div>
-        </div>
+        >
+          {stats.map((stat, index) => (
+            <motion.div
+              key={index}
+              initial={{
+                opacity: 0,
+                y: 30,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.12,
+              }}
+              whileHover={{
+                y: -6,
+              }}
+              className="
+                rounded-2xl border border-white/10
+                bg-white/[0.03]
+                p-8 text-center
+                transition-all duration-300
+                hover:border-cyan-400/30
+                hover:bg-cyan-400/[0.03]
+              "
+            >
+              <h3
+                className="
+                  text-4xl font-bold
+                  bg-gradient-to-r
+                  from-cyan-400 to-blue-500
+                  bg-clip-text text-transparent
+                "
+              >
+                <CountUp
+                  end={stat.number}
+                  duration={4}
+                  enableScrollSpy
+                  scrollSpyOnce={false}
+                />
+                {stat.suffix}
+              </h3>
+
+              <p className="mt-4 text-sm uppercase tracking-[0.2em] text-gray-400">
+                {stat.title}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 
