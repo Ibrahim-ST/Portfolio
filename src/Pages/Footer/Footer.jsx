@@ -12,7 +12,7 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: <FaFacebookF size={18} />,
-      href: "https://www.facebook.com/ibrahim.siddiqueee",
+      href: "https://www.facebook.com/ibrah.siddiquee",
       label: "Facebook",
     },
     {
