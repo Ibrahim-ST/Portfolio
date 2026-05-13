@@ -1,28 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-li{
-    text-transform: uppercase;
-    font-size: large;
+li {
+  text-transform: uppercase;
+  font-size: large;
 }
 
-ul li:hover{
-    color: brown;
+ul li:hover {
+  color: brown;
 }
 
-a:active{
-    color: red;
+a:active {
+  color: red;
 }
-p{
-    font-family: monospace;
-    /* font-family: poppins; */
-    font-size: large;
+p {
+  font-family: monospace;
+  /* font-family: poppins; */
+  font-size: large;
 }
 
-body{
-    overflow-x: hidden;
+body {
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .perspective {
+    perspective: 1000px;
+  }
+  .rotate-scale {
+    transform: scale(1.05) rotateY(8deg);
+  }
+  .rotate-scale-right {
+    transform: scale(1.05) rotateY(-8deg);
+  }
 }

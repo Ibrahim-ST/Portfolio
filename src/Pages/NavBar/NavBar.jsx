@@ -68,8 +68,7 @@ const NavBar = () => {
                 {navOptions}
               </ul>
             </div>
-            <img className="w-10 hidden md:block" src="./lo.png" alt="" />
-            {/* <Link className=" mx-2 normal-case text-xl  hover: ">Farmhouse Academy</Link> */}
+            <img className="w-10 hidden md:block" src="./lo.png" alt="" />            
           </div>
           <div className="navbar-center hidden lg:flex  ">
             <ul className="menu menu-horizontal px-1 ">{navOptions}</ul>

@@ -15,7 +15,7 @@ const About = () => {
              data-aos-duration="1000">
           <img
             src={ibrahim}
-            className="sm:max-w-sm rounded-3xl bg-white shadow-2xl p-5 hover:-translate-x-5 hover:grayscale transition-transform duration-300 -rotate-6 "
+            className="sm:max-w-sm rounded-3xl bg-white shadow-2xl p-5 hover:rotate-0 hover:grayscale transition-transform duration-300 -rotate-6 "
           />
           </div>
           <div  >
